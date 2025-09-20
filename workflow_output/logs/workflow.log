@@ -1,0 +1,339 @@
+[2025-09-20 00:04:23] INFO: Validating environment...
+[2025-09-20 00:04:23] INFO: Environment validation complete
+[2025-09-20 00:04:23] INFO: Setting up environment...
+[2025-09-20 00:04:23] DEBUG: Sourcing environment from env.sh
+[2025-09-20 00:04:23] INFO: Cleaning up temporary files...
+[2025-09-20 00:04:43] INFO: Validating environment...
+[2025-09-20 00:04:43] INFO: Environment validation complete
+[2025-09-20 00:04:43] INFO: Setting up environment...
+[2025-09-20 00:04:43] DEBUG: Sourcing environment from env.sh
+[2025-09-20 00:04:43] INFO: Environment setup complete
+[2025-09-20 00:04:43] INFO: Reading chromosome data from /workspace/apps/1000genome-workflow/data.csv
+[2025-09-20 00:04:43] DEBUG: Found chromosome 1: ALL.chr1.250000.vcf (250000 lines)
+[2025-09-20 00:04:43] DEBUG: Found chromosome 2: ALL.chr2.250000.vcf (250000 lines)
+[2025-09-20 00:04:43] DEBUG: Found chromosome 3: ALL.chr3.250000.vcf (250000 lines)
+[2025-09-20 00:04:43] DEBUG: Found chromosome 4: ALL.chr4.250000.vcf (250000 lines)
+[2025-09-20 00:04:43] DEBUG: Found chromosome 5: ALL.chr5.250000.vcf (250000 lines)
+[2025-09-20 00:04:43] DEBUG: Found chromosome 6: ALL.chr6.250000.vcf (250000 lines)
+[2025-09-20 00:04:43] DEBUG: Found chromosome 7: ALL.chr7.250000.vcf (250000 lines)
+[2025-09-20 00:04:43] DEBUG: Found chromosome 8: ALL.chr8.250000.vcf (250000 lines)
+[2025-09-20 00:04:43] DEBUG: Found chromosome 9: ALL.chr9.250000.vcf (250000 lines)
+[2025-09-20 00:04:43] DEBUG: Found chromosome 10: ALL.chr10.250000.vcf (250000 lines)
+[2025-09-20 00:04:43] INFO: Using specified chromosomes: 1 2
+[2025-09-20 00:04:43] INFO: Starting 1000genome MPI workflow
+[2025-09-20 00:04:43] INFO: Configuration:
+[2025-09-20 00:04:43] INFO:   Dataset: 20130502
+[2025-09-20 00:04:43] INFO:   Individuals jobs per chromosome: 1
+[2025-09-20 00:04:43] INFO:   MPI processes: 4
+[2025-09-20 00:04:43] INFO:   Output directory: /workspace/apps/1000genome-workflow/workflow_output
+[2025-09-20 00:04:43] INFO:   Chromosomes: 1 2
+[2025-09-20 00:04:43] INFO:   Populations: ALL EUR EAS AFR AMR SAS GBR
+[2025-09-20 00:04:43] INFO: Processing chromosome 1
+[2025-09-20 00:04:43] INFO: Running individuals jobs for chromosome 1
+[2025-09-20 00:04:43] ERROR: One or more individuals jobs failed for chromosome 1
+[2025-09-20 00:04:43] ERROR: Individuals jobs failed for chromosome 1
+[2025-09-20 00:04:43] ERROR: Workflow failed!
+[2025-09-20 00:04:43] INFO: Cleaning up temporary files...
+[2025-09-20 00:06:30] INFO: Validating environment...
+[2025-09-20 00:06:30] INFO: Environment validation complete
+[2025-09-20 00:06:30] INFO: Setting up environment...
+[2025-09-20 00:06:30] DEBUG: Sourcing environment from env.sh
+[2025-09-20 00:06:30] INFO: Environment setup complete
+[2025-09-20 00:06:30] INFO: Reading chromosome data from /workspace/apps/1000genome-workflow/data.csv
+[2025-09-20 00:06:30] DEBUG: Found chromosome 1: ALL.chr1.250000.vcf.gz (250000 lines)
+[2025-09-20 00:06:30] DEBUG: Found chromosome 2: ALL.chr2.250000.vcf.gz (250000 lines)
+[2025-09-20 00:06:30] DEBUG: Found chromosome 3: ALL.chr3.250000.vcf.gz (250000 lines)
+[2025-09-20 00:06:30] DEBUG: Found chromosome 4: ALL.chr4.250000.vcf.gz (250000 lines)
+[2025-09-20 00:06:30] DEBUG: Found chromosome 5: ALL.chr5.250000.vcf.gz (250000 lines)
+[2025-09-20 00:06:30] DEBUG: Found chromosome 6: ALL.chr6.250000.vcf.gz (250000 lines)
+[2025-09-20 00:06:30] DEBUG: Found chromosome 7: ALL.chr7.250000.vcf.gz (250000 lines)
+[2025-09-20 00:06:30] DEBUG: Found chromosome 8: ALL.chr8.250000.vcf.gz (250000 lines)
+[2025-09-20 00:06:30] DEBUG: Found chromosome 9: ALL.chr9.250000.vcf.gz (250000 lines)
+[2025-09-20 00:06:30] DEBUG: Found chromosome 10: ALL.chr10.250000.vcf.gz (250000 lines)
+[2025-09-20 00:06:30] INFO: Using specified chromosomes: 1 2
+[2025-09-20 00:06:30] INFO: Starting 1000genome MPI workflow
+[2025-09-20 00:06:30] INFO: Configuration:
+[2025-09-20 00:06:30] INFO:   Dataset: 20130502
+[2025-09-20 00:06:30] INFO:   Individuals jobs per chromosome: 1
+[2025-09-20 00:06:30] INFO:   MPI processes: 4
+[2025-09-20 00:06:30] INFO:   Output directory: /workspace/apps/1000genome-workflow/workflow_output
+[2025-09-20 00:06:30] INFO:   Chromosomes: 1 2
+[2025-09-20 00:06:30] INFO:   Populations: ALL EUR EAS AFR AMR SAS GBR
+[2025-09-20 00:06:30] INFO: Processing chromosome 1
+[2025-09-20 00:06:30] INFO: Running individuals jobs for chromosome 1
+[2025-09-20 00:06:30] INFO: All individuals jobs completed for chromosome 1
+[2025-09-20 00:06:30] INFO: Running individuals merge for chromosome 1
+[2025-09-20 00:06:30] INFO: Running sifting for chromosome 1
+[2025-09-20 00:06:30] ERROR: Sifting failed for chromosome 1
+[2025-09-20 00:06:30] INFO: Individuals merge completed for chromosome 1
+[2025-09-20 00:06:30] ERROR: Sifting failed for chromosome 1
+[2025-09-20 00:06:30] ERROR: Workflow failed!
+[2025-09-20 00:06:30] INFO: Cleaning up temporary files...
+[2025-09-20 00:07:19] INFO: Validating environment...
+[2025-09-20 00:07:19] INFO: Environment validation complete
+[2025-09-20 00:07:19] INFO: Setting up environment...
+[2025-09-20 00:07:19] DEBUG: Sourcing environment from env.sh
+[2025-09-20 00:07:19] INFO: Environment setup complete
+[2025-09-20 00:07:19] INFO: Reading chromosome data from /workspace/apps/1000genome-workflow/data.csv
+[2025-09-20 00:07:19] DEBUG: Found chromosome 1: ALL.chr1.250000.vcf.gz (250000 lines)
+[2025-09-20 00:07:19] DEBUG: Found chromosome 2: ALL.chr2.250000.vcf.gz (250000 lines)
+[2025-09-20 00:07:19] DEBUG: Found chromosome 3: ALL.chr3.250000.vcf.gz (250000 lines)
+[2025-09-20 00:07:19] DEBUG: Found chromosome 4: ALL.chr4.250000.vcf.gz (250000 lines)
+[2025-09-20 00:07:19] DEBUG: Found chromosome 5: ALL.chr5.250000.vcf.gz (250000 lines)
+[2025-09-20 00:07:19] DEBUG: Found chromosome 6: ALL.chr6.250000.vcf.gz (250000 lines)
+[2025-09-20 00:07:19] DEBUG: Found chromosome 7: ALL.chr7.250000.vcf.gz (250000 lines)
+[2025-09-20 00:07:19] DEBUG: Found chromosome 8: ALL.chr8.250000.vcf.gz (250000 lines)
+[2025-09-20 00:07:19] DEBUG: Found chromosome 9: ALL.chr9.250000.vcf.gz (250000 lines)
+[2025-09-20 00:07:19] DEBUG: Found chromosome 10: ALL.chr10.250000.vcf.gz (250000 lines)
+[2025-09-20 00:07:19] INFO: Using specified chromosomes: 1
+[2025-09-20 00:07:19] INFO: Starting 1000genome MPI workflow
+[2025-09-20 00:07:19] INFO: Configuration:
+[2025-09-20 00:07:19] INFO:   Dataset: 20130502
+[2025-09-20 00:07:19] INFO:   Individuals jobs per chromosome: 1
+[2025-09-20 00:07:19] INFO:   MPI processes: 4
+[2025-09-20 00:07:19] INFO:   Output directory: /workspace/apps/1000genome-workflow/workflow_output
+[2025-09-20 00:07:19] INFO:   Chromosomes: 1
+[2025-09-20 00:07:19] INFO:   Populations: ALL EUR EAS AFR AMR SAS GBR
+[2025-09-20 00:07:19] INFO: Processing chromosome 1
+[2025-09-20 00:07:19] INFO: Running individuals jobs for chromosome 1
+[2025-09-20 00:07:19] INFO: All individuals jobs completed for chromosome 1
+[2025-09-20 00:07:19] INFO: Running sifting for chromosome 1
+[2025-09-20 00:07:19] INFO: Running individuals merge for chromosome 1
+[2025-09-20 00:07:19] INFO: Sifting completed for chromosome 1
+[2025-09-20 00:07:19] INFO: Individuals merge completed for chromosome 1
+[2025-09-20 00:07:19] INFO: Chromosome 1 processing complete
+[2025-09-20 00:07:19] INFO: Starting analysis phase
+[2025-09-20 00:07:19] INFO: Running frequency analysis for chromosome 1, population ALL
+[2025-09-20 00:07:19] INFO: Running mutation overlap for chromosome 1, population ALL
+[2025-09-20 00:07:19] ERROR: Frequency analysis failed for chromosome 1, population ALL
+[2025-09-20 00:07:19] ERROR: Mutation overlap failed for chromosome 1, population ALL
+[2025-09-20 00:07:19] ERROR: Mutation overlap failed for chromosome 1, population ALL
+[2025-09-20 00:07:19] ERROR: Frequency analysis failed for chromosome 1, population ALL
+[2025-09-20 00:07:19] ERROR: Workflow failed!
+[2025-09-20 00:07:19] INFO: Cleaning up temporary files...
+[2025-09-20 00:13:50] INFO: Validating environment...
+[2025-09-20 00:13:50] INFO: Environment validation complete
+[2025-09-20 00:13:50] INFO: Setting up environment...
+[2025-09-20 00:13:50] DEBUG: Sourcing environment from env.sh
+[2025-09-20 00:13:50] INFO: Environment setup complete
+[2025-09-20 00:13:50] INFO: Reading chromosome data from /workspace/apps/1000genome-workflow/data.csv
+[2025-09-20 00:13:50] DEBUG: Found chromosome 1: ALL.chr1.250000.vcf.gz (250000 lines)
+[2025-09-20 00:13:50] DEBUG: Found chromosome 2: ALL.chr2.250000.vcf.gz (250000 lines)
+[2025-09-20 00:13:50] DEBUG: Found chromosome 3: ALL.chr3.250000.vcf.gz (250000 lines)
+[2025-09-20 00:13:50] DEBUG: Found chromosome 4: ALL.chr4.250000.vcf.gz (250000 lines)
+[2025-09-20 00:13:50] DEBUG: Found chromosome 5: ALL.chr5.250000.vcf.gz (250000 lines)
+[2025-09-20 00:13:50] DEBUG: Found chromosome 6: ALL.chr6.250000.vcf.gz (250000 lines)
+[2025-09-20 00:13:50] DEBUG: Found chromosome 7: ALL.chr7.250000.vcf.gz (250000 lines)
+[2025-09-20 00:13:50] DEBUG: Found chromosome 8: ALL.chr8.250000.vcf.gz (250000 lines)
+[2025-09-20 00:13:50] DEBUG: Found chromosome 9: ALL.chr9.250000.vcf.gz (250000 lines)
+[2025-09-20 00:13:50] DEBUG: Found chromosome 10: ALL.chr10.250000.vcf.gz (250000 lines)
+[2025-09-20 00:13:50] INFO: Using specified chromosomes: 1
+[2025-09-20 00:13:50] INFO: Starting 1000genome MPI workflow
+[2025-09-20 00:13:50] INFO: Configuration:
+[2025-09-20 00:13:50] INFO:   Dataset: 20130502
+[2025-09-20 00:13:50] INFO:   Individuals jobs per chromosome: 1
+[2025-09-20 00:13:50] INFO:   MPI processes: 4
+[2025-09-20 00:13:50] INFO:   Output directory: /workspace/apps/1000genome-workflow/workflow_output
+[2025-09-20 00:13:50] INFO:   Chromosomes: 1
+[2025-09-20 00:13:50] INFO:   Populations: ALL EUR
+[2025-09-20 00:13:50] INFO: Processing chromosome 1
+[2025-09-20 00:13:50] INFO: Running individuals jobs for chromosome 1
+[2025-09-20 00:13:50] INFO: All individuals jobs completed for chromosome 1
+[2025-09-20 00:13:50] INFO: Running individuals merge for chromosome 1
+[2025-09-20 00:13:50] INFO: Running sifting for chromosome 1
+[2025-09-20 00:13:50] INFO: Sifting completed for chromosome 1
+[2025-09-20 00:13:50] INFO: Individuals merge completed for chromosome 1
+[2025-09-20 00:13:50] INFO: Chromosome 1 processing complete
+[2025-09-20 00:13:50] INFO: Starting analysis phase
+[2025-09-20 00:13:50] INFO: Running mutation overlap for chromosome 1, population ALL
+[2025-09-20 00:13:50] INFO: Running frequency analysis for chromosome 1, population ALL
+[2025-09-20 00:13:50] ERROR: Frequency analysis failed for chromosome 1, population ALL
+[2025-09-20 00:13:50] ERROR: Mutation overlap failed for chromosome 1, population ALL
+[2025-09-20 00:13:50] ERROR: Mutation overlap failed for chromosome 1, population ALL
+[2025-09-20 00:13:50] ERROR: Frequency analysis failed for chromosome 1, population ALL
+[2025-09-20 00:13:50] ERROR: Workflow failed!
+[2025-09-20 00:13:50] INFO: Cleaning up temporary files...
+[2025-09-20 00:15:18] INFO: Validating environment...
+[2025-09-20 00:15:18] INFO: Environment validation complete
+[2025-09-20 00:15:18] INFO: Setting up environment...
+[2025-09-20 00:15:18] DEBUG: Sourcing environment from env.sh
+[2025-09-20 00:15:18] INFO: Environment setup complete
+[2025-09-20 00:15:18] INFO: Reading chromosome data from /workspace/apps/1000genome-workflow/data.csv
+[2025-09-20 00:15:18] DEBUG: Found chromosome 1: ALL.chr1.250000.vcf.gz (250000 lines)
+[2025-09-20 00:15:18] DEBUG: Found chromosome 2: ALL.chr2.250000.vcf.gz (250000 lines)
+[2025-09-20 00:15:18] DEBUG: Found chromosome 3: ALL.chr3.250000.vcf.gz (250000 lines)
+[2025-09-20 00:15:18] DEBUG: Found chromosome 4: ALL.chr4.250000.vcf.gz (250000 lines)
+[2025-09-20 00:15:18] DEBUG: Found chromosome 5: ALL.chr5.250000.vcf.gz (250000 lines)
+[2025-09-20 00:15:18] DEBUG: Found chromosome 6: ALL.chr6.250000.vcf.gz (250000 lines)
+[2025-09-20 00:15:18] DEBUG: Found chromosome 7: ALL.chr7.250000.vcf.gz (250000 lines)
+[2025-09-20 00:15:18] DEBUG: Found chromosome 8: ALL.chr8.250000.vcf.gz (250000 lines)
+[2025-09-20 00:15:18] DEBUG: Found chromosome 9: ALL.chr9.250000.vcf.gz (250000 lines)
+[2025-09-20 00:15:18] DEBUG: Found chromosome 10: ALL.chr10.250000.vcf.gz (250000 lines)
+[2025-09-20 00:15:18] INFO: Using specified chromosomes: 1
+[2025-09-20 00:15:18] INFO: Starting 1000genome MPI workflow
+[2025-09-20 00:15:18] INFO: Configuration:
+[2025-09-20 00:15:18] INFO:   Dataset: 20130502
+[2025-09-20 00:15:18] INFO:   Individuals jobs per chromosome: 1
+[2025-09-20 00:15:18] INFO:   MPI processes: 4
+[2025-09-20 00:15:18] INFO:   Output directory: /workspace/apps/1000genome-workflow/workflow_output
+[2025-09-20 00:15:18] INFO:   Chromosomes: 1
+[2025-09-20 00:15:18] INFO:   Populations: ALL EUR
+[2025-09-20 00:15:18] INFO: Processing chromosome 1
+[2025-09-20 00:15:18] INFO: Running individuals jobs for chromosome 1
+[2025-09-20 00:15:18] INFO: All individuals jobs completed for chromosome 1
+[2025-09-20 00:15:18] INFO: Running individuals merge for chromosome 1
+[2025-09-20 00:15:18] INFO: Running sifting for chromosome 1
+[2025-09-20 00:15:18] INFO: Individuals merge completed for chromosome 1
+[2025-09-20 00:15:18] INFO: Sifting completed for chromosome 1
+[2025-09-20 00:15:18] INFO: Chromosome 1 processing complete
+[2025-09-20 00:15:18] INFO: Starting analysis phase
+[2025-09-20 00:15:18] INFO: Running mutation overlap for chromosome 1, population ALL
+[2025-09-20 00:15:18] INFO: Running frequency analysis for chromosome 1, population ALL
+[2025-09-20 00:15:18] INFO: Frequency analysis completed for chromosome 1, population ALL
+[2025-09-20 00:15:18] INFO: Mutation overlap completed for chromosome 1, population ALL
+[2025-09-20 00:15:18] INFO: Running mutation overlap for chromosome 1, population EUR
+[2025-09-20 00:15:18] INFO: Running frequency analysis for chromosome 1, population EUR
+[2025-09-20 00:15:18] INFO: Mutation overlap completed for chromosome 1, population EUR
+[2025-09-20 00:15:18] INFO: Frequency analysis completed for chromosome 1, population EUR
+[2025-09-20 00:15:18] INFO: 1000genome MPI workflow completed successfully
+[2025-09-20 00:15:18] INFO: Workflow completed successfully!
+[2025-09-20 00:15:18] INFO: Cleaning up temporary files...
+[2025-09-20 00:15:31] INFO: Validating environment...
+[2025-09-20 00:15:31] INFO: Environment validation complete
+[2025-09-20 00:15:31] INFO: Setting up environment...
+[2025-09-20 00:15:31] DEBUG: Sourcing environment from env.sh
+[2025-09-20 00:15:31] INFO: Environment setup complete
+[2025-09-20 00:15:31] INFO: Reading chromosome data from /workspace/apps/1000genome-workflow/data.csv
+[2025-09-20 00:15:31] DEBUG: Found chromosome 1: ALL.chr1.250000.vcf.gz (250000 lines)
+[2025-09-20 00:15:31] DEBUG: Found chromosome 2: ALL.chr2.250000.vcf.gz (250000 lines)
+[2025-09-20 00:15:31] DEBUG: Found chromosome 3: ALL.chr3.250000.vcf.gz (250000 lines)
+[2025-09-20 00:15:31] DEBUG: Found chromosome 4: ALL.chr4.250000.vcf.gz (250000 lines)
+[2025-09-20 00:15:31] DEBUG: Found chromosome 5: ALL.chr5.250000.vcf.gz (250000 lines)
+[2025-09-20 00:15:31] DEBUG: Found chromosome 6: ALL.chr6.250000.vcf.gz (250000 lines)
+[2025-09-20 00:15:31] DEBUG: Found chromosome 7: ALL.chr7.250000.vcf.gz (250000 lines)
+[2025-09-20 00:15:31] DEBUG: Found chromosome 8: ALL.chr8.250000.vcf.gz (250000 lines)
+[2025-09-20 00:15:31] DEBUG: Found chromosome 9: ALL.chr9.250000.vcf.gz (250000 lines)
+[2025-09-20 00:15:31] DEBUG: Found chromosome 10: ALL.chr10.250000.vcf.gz (250000 lines)
+[2025-09-20 00:15:31] INFO: Using specified chromosomes: 1 2 3
+[2025-09-20 00:15:31] INFO: Starting 1000genome MPI workflow
+[2025-09-20 00:15:31] INFO: Configuration:
+[2025-09-20 00:15:31] INFO:   Dataset: 20130502
+[2025-09-20 00:15:31] INFO:   Individuals jobs per chromosome: 2
+[2025-09-20 00:15:31] INFO:   MPI processes: 6
+[2025-09-20 00:15:31] INFO:   Output directory: /workspace/apps/1000genome-workflow/workflow_output
+[2025-09-20 00:15:31] INFO:   Chromosomes: 1 2 3
+[2025-09-20 00:15:31] INFO:   Populations: ALL EUR AFR
+[2025-09-20 00:15:31] INFO: Processing chromosome 1
+[2025-09-20 00:15:31] INFO: Running individuals jobs for chromosome 1
+[2025-09-20 00:15:31] INFO: All individuals jobs completed for chromosome 1
+[2025-09-20 00:15:31] INFO: Running individuals merge for chromosome 1
+[2025-09-20 00:15:31] INFO: Running sifting for chromosome 1
+[2025-09-20 00:15:31] INFO: Sifting completed for chromosome 1
+[2025-09-20 00:15:31] INFO: Individuals merge completed for chromosome 1
+[2025-09-20 00:15:31] INFO: Chromosome 1 processing complete
+[2025-09-20 00:15:31] INFO: Processing chromosome 2
+[2025-09-20 00:15:31] INFO: Running individuals jobs for chromosome 2
+[2025-09-20 00:15:31] INFO: All individuals jobs completed for chromosome 2
+[2025-09-20 00:15:31] INFO: Running individuals merge for chromosome 2
+[2025-09-20 00:15:31] INFO: Running sifting for chromosome 2
+[2025-09-20 00:15:31] INFO: Sifting completed for chromosome 2
+[2025-09-20 00:15:31] INFO: Individuals merge completed for chromosome 2
+[2025-09-20 00:15:32] INFO: Chromosome 2 processing complete
+[2025-09-20 00:15:32] INFO: Processing chromosome 3
+[2025-09-20 00:15:32] INFO: Running individuals jobs for chromosome 3
+[2025-09-20 00:15:32] INFO: All individuals jobs completed for chromosome 3
+[2025-09-20 00:15:32] INFO: Running individuals merge for chromosome 3
+[2025-09-20 00:15:32] INFO: Running sifting for chromosome 3
+[2025-09-20 00:15:32] INFO: Sifting completed for chromosome 3
+[2025-09-20 00:15:32] INFO: Individuals merge completed for chromosome 3
+[2025-09-20 00:15:32] INFO: Chromosome 3 processing complete
+[2025-09-20 00:15:32] INFO: Starting analysis phase
+[2025-09-20 00:15:32] INFO: Running mutation overlap for chromosome 1, population ALL
+[2025-09-20 00:15:32] INFO: Running frequency analysis for chromosome 1, population ALL
+[2025-09-20 00:15:32] INFO: Mutation overlap completed for chromosome 1, population ALL
+[2025-09-20 00:15:32] INFO: Frequency analysis completed for chromosome 1, population ALL
+[2025-09-20 00:15:32] INFO: Running mutation overlap for chromosome 1, population EUR
+[2025-09-20 00:15:32] INFO: Running frequency analysis for chromosome 1, population EUR
+[2025-09-20 00:15:32] INFO: Mutation overlap completed for chromosome 1, population EUR
+[2025-09-20 00:15:32] INFO: Frequency analysis completed for chromosome 1, population EUR
+[2025-09-20 00:15:32] INFO: Running mutation overlap for chromosome 1, population AFR
+[2025-09-20 00:15:32] INFO: Running frequency analysis for chromosome 1, population AFR
+[2025-09-20 00:15:32] INFO: Mutation overlap completed for chromosome 1, population AFR
+[2025-09-20 00:15:32] INFO: Frequency analysis completed for chromosome 1, population AFR
+[2025-09-20 00:15:32] INFO: Running mutation overlap for chromosome 2, population ALL
+[2025-09-20 00:15:32] INFO: Running frequency analysis for chromosome 2, population ALL
+[2025-09-20 00:15:32] INFO: Mutation overlap completed for chromosome 2, population ALL
+[2025-09-20 00:15:32] INFO: Frequency analysis completed for chromosome 2, population ALL
+[2025-09-20 00:15:32] INFO: Running frequency analysis for chromosome 2, population EUR
+[2025-09-20 00:15:32] INFO: Running mutation overlap for chromosome 2, population EUR
+[2025-09-20 00:15:32] INFO: Mutation overlap completed for chromosome 2, population EUR
+[2025-09-20 00:15:32] INFO: Frequency analysis completed for chromosome 2, population EUR
+[2025-09-20 00:15:32] INFO: Running mutation overlap for chromosome 2, population AFR
+[2025-09-20 00:15:32] INFO: Running frequency analysis for chromosome 2, population AFR
+[2025-09-20 00:15:32] INFO: Mutation overlap completed for chromosome 2, population AFR
+[2025-09-20 00:15:32] INFO: Frequency analysis completed for chromosome 2, population AFR
+[2025-09-20 00:15:32] INFO: Running mutation overlap for chromosome 3, population ALL
+[2025-09-20 00:15:32] INFO: Running frequency analysis for chromosome 3, population ALL
+[2025-09-20 00:15:32] INFO: Mutation overlap completed for chromosome 3, population ALL
+[2025-09-20 00:15:32] INFO: Frequency analysis completed for chromosome 3, population ALL
+[2025-09-20 00:15:32] INFO: Running mutation overlap for chromosome 3, population EUR
+[2025-09-20 00:15:32] INFO: Running frequency analysis for chromosome 3, population EUR
+[2025-09-20 00:15:32] INFO: Frequency analysis completed for chromosome 3, population EUR
+[2025-09-20 00:15:32] INFO: Mutation overlap completed for chromosome 3, population EUR
+[2025-09-20 00:15:32] INFO: Running frequency analysis for chromosome 3, population AFR
+[2025-09-20 00:15:32] INFO: Running mutation overlap for chromosome 3, population AFR
+[2025-09-20 00:15:32] INFO: Frequency analysis completed for chromosome 3, population AFR
+[2025-09-20 00:15:32] INFO: Mutation overlap completed for chromosome 3, population AFR
+[2025-09-20 00:15:32] INFO: 1000genome MPI workflow completed successfully
+[2025-09-20 00:15:32] INFO: Workflow completed successfully!
+[2025-09-20 00:15:32] INFO: Cleaning up temporary files...
+[2025-09-20 00:16:03] INFO: Validating environment...
+[2025-09-20 00:16:03] INFO: Environment validation complete
+[2025-09-20 00:16:03] INFO: Setting up environment...
+[2025-09-20 00:16:03] INFO: Environment setup complete
+[2025-09-20 00:16:03] INFO: Reading chromosome data from /workspace/apps/1000genome-workflow/data.csv
+[2025-09-20 00:16:03] INFO: Using specified chromosomes: 1 2
+[2025-09-20 00:16:03] INFO: Starting 1000genome MPI workflow
+[2025-09-20 00:16:03] INFO: Configuration:
+[2025-09-20 00:16:03] INFO:   Dataset: 20130502
+[2025-09-20 00:16:03] INFO:   Individuals jobs per chromosome: 2
+[2025-09-20 00:16:03] INFO:   MPI processes: 4
+[2025-09-20 00:16:03] INFO:   Output directory: /workspace/apps/1000genome-workflow/workflow_output
+[2025-09-20 00:16:03] INFO:   Chromosomes: 1 2
+[2025-09-20 00:16:03] INFO:   Populations: ALL EUR
+[2025-09-20 00:16:03] INFO: Processing chromosome 1
+[2025-09-20 00:16:03] INFO: Running individuals jobs for chromosome 1
+[2025-09-20 00:16:03] INFO: All individuals jobs completed for chromosome 1
+[2025-09-20 00:16:03] INFO: Running individuals merge for chromosome 1
+[2025-09-20 00:16:03] INFO: Running sifting for chromosome 1
+[2025-09-20 00:16:03] INFO: Sifting completed for chromosome 1
+[2025-09-20 00:16:03] INFO: Individuals merge completed for chromosome 1
+[2025-09-20 00:16:03] INFO: Chromosome 1 processing complete
+[2025-09-20 00:16:03] INFO: Processing chromosome 2
+[2025-09-20 00:16:03] INFO: Running individuals jobs for chromosome 2
+[2025-09-20 00:16:03] INFO: All individuals jobs completed for chromosome 2
+[2025-09-20 00:16:03] INFO: Running individuals merge for chromosome 2
+[2025-09-20 00:16:03] INFO: Running sifting for chromosome 2
+[2025-09-20 00:16:03] INFO: Sifting completed for chromosome 2
+[2025-09-20 00:16:03] INFO: Individuals merge completed for chromosome 2
+[2025-09-20 00:16:03] INFO: Chromosome 2 processing complete
+[2025-09-20 00:16:03] INFO: Starting analysis phase
+[2025-09-20 00:16:03] INFO: Running mutation overlap for chromosome 1, population ALL
+[2025-09-20 00:16:03] INFO: Running frequency analysis for chromosome 1, population ALL
+[2025-09-20 00:16:03] INFO: Mutation overlap completed for chromosome 1, population ALL
+[2025-09-20 00:16:03] INFO: Frequency analysis completed for chromosome 1, population ALL
+[2025-09-20 00:16:03] INFO: Running mutation overlap for chromosome 1, population EUR
+[2025-09-20 00:16:03] INFO: Running frequency analysis for chromosome 1, population EUR
+[2025-09-20 00:16:03] INFO: Frequency analysis completed for chromosome 1, population EUR
+[2025-09-20 00:16:03] INFO: Mutation overlap completed for chromosome 1, population EUR
+[2025-09-20 00:16:03] INFO: Running mutation overlap for chromosome 2, population ALL
+[2025-09-20 00:16:03] INFO: Running frequency analysis for chromosome 2, population ALL
+[2025-09-20 00:16:03] INFO: Mutation overlap completed for chromosome 2, population ALL
+[2025-09-20 00:16:03] INFO: Frequency analysis completed for chromosome 2, population ALL
+[2025-09-20 00:16:03] INFO: Running frequency analysis for chromosome 2, population EUR
+[2025-09-20 00:16:03] INFO: Running mutation overlap for chromosome 2, population EUR
+[2025-09-20 00:16:03] INFO: Frequency analysis completed for chromosome 2, population EUR
+[2025-09-20 00:16:03] INFO: Mutation overlap completed for chromosome 2, population EUR
+[2025-09-20 00:16:03] INFO: 1000genome MPI workflow completed successfully
+[2025-09-20 00:16:03] INFO: Workflow completed successfully!
+[2025-09-20 00:16:03] INFO: Cleaning up temporary files...

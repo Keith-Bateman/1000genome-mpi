@@ -1,0 +1,10 @@
+[Sat Sep 20 00:07:19 UTC 2025] Starting job: sifting_chr1
+[Sat Sep 20 00:07:19 UTC 2025] Command: python3 /workspace/apps/1000genome-workflow/bin/sifting.py "/workspace/apps/1000genome-workflow/data/20130502/ALL.chr1.250000.vcf.gz" 1
+[Sat Sep 20 00:13:50 UTC 2025] Starting job: sifting_chr1
+[Sat Sep 20 00:13:50 UTC 2025] Command: python3 /workspace/apps/1000genome-workflow/bin/sifting.py "/workspace/apps/1000genome-workflow/data/20130502/ALL.chr1.250000.vcf.gz" 1
+[Sat Sep 20 00:15:18 UTC 2025] Starting job: sifting_chr1
+[Sat Sep 20 00:15:18 UTC 2025] Command: python3 /workspace/apps/1000genome-workflow/bin/sifting.py "/workspace/apps/1000genome-workflow/data/20130502/ALL.chr1.250000.vcf.gz" 1
+[Sat Sep 20 00:15:31 UTC 2025] Starting job: sifting_chr1
+[Sat Sep 20 00:15:31 UTC 2025] Command: python3 /workspace/apps/1000genome-workflow/bin/sifting.py "/workspace/apps/1000genome-workflow/data/20130502/ALL.chr1.250000.vcf.gz" 1
+[Sat Sep 20 00:16:03 UTC 2025] Starting job: sifting_chr1
+[Sat Sep 20 00:16:03 UTC 2025] Command: python3 /workspace/apps/1000genome-workflow/bin/sifting.py "/workspace/apps/1000genome-workflow/data/20130502/ALL.chr1.250000.vcf.gz" 1

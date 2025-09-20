@@ -1,0 +1,2 @@
+[Sat Sep 20 00:15:32 UTC 2025] Starting job: mutation_overlap_chr3_EUR
+[Sat Sep 20 00:15:32 UTC 2025] Command: python3 /workspace/apps/1000genome-workflow/bin/mutation_overlap.py -c 3 -pop EUR

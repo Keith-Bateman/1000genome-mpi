@@ -1,0 +1,12 @@
+[Sat Sep 20 00:06:30 UTC 2025] Starting job: individuals_merge_chr1
+[Sat Sep 20 00:06:30 UTC 2025] Command: mpirun -np 5 python3 /workspace/apps/1000genome-workflow/bin/individuals_merge_mpi.py 1
+[Sat Sep 20 00:07:19 UTC 2025] Starting job: individuals_merge_chr1
+[Sat Sep 20 00:07:19 UTC 2025] Command: mpirun -np 5 python3 /workspace/apps/1000genome-workflow/bin/individuals_merge_mpi.py 1
+[Sat Sep 20 00:13:50 UTC 2025] Starting job: individuals_merge_chr1
+[Sat Sep 20 00:13:50 UTC 2025] Command: mpirun -np 5 python3 /workspace/apps/1000genome-workflow/bin/individuals_merge_mpi.py 1
+[Sat Sep 20 00:15:18 UTC 2025] Starting job: individuals_merge_chr1
+[Sat Sep 20 00:15:18 UTC 2025] Command: mpirun -np 5 python3 /workspace/apps/1000genome-workflow/bin/individuals_merge_mpi.py 1
+[Sat Sep 20 00:15:31 UTC 2025] Starting job: individuals_merge_chr1
+[Sat Sep 20 00:15:31 UTC 2025] Command: mpirun -np 7 python3 /workspace/apps/1000genome-workflow/bin/individuals_merge_mpi.py 1
+[Sat Sep 20 00:16:03 UTC 2025] Starting job: individuals_merge_chr1
+[Sat Sep 20 00:16:03 UTC 2025] Command: mpirun -np 5 python3 /workspace/apps/1000genome-workflow/bin/individuals_merge_mpi.py 1

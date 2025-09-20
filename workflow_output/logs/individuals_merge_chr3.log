@@ -1,0 +1,2 @@
+[Sat Sep 20 00:15:32 UTC 2025] Starting job: individuals_merge_chr3
+[Sat Sep 20 00:15:32 UTC 2025] Command: mpirun -np 7 python3 /workspace/apps/1000genome-workflow/bin/individuals_merge_mpi.py 3

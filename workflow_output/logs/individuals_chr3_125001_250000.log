@@ -1,0 +1,2 @@
+[Sat Sep 20 00:15:32 UTC 2025] Starting job: individuals_chr3_125001_250000
+[Sat Sep 20 00:15:32 UTC 2025] Command: mpirun -np 6 python3 /workspace/apps/1000genome-workflow/bin/individuals_mpi.py "/workspace/apps/1000genome-workflow/data/20130502/ALL.chr3.250000.vcf.gz" "/workspace/apps/1000genome-workflow/data/20130502/columns.txt" 3 125001 250000 250000

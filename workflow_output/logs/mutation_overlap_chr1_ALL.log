@@ -1,0 +1,6 @@
+[Sat Sep 20 00:15:18 UTC 2025] Starting job: mutation_overlap_chr1_ALL
+[Sat Sep 20 00:15:18 UTC 2025] Command: python3 /workspace/apps/1000genome-workflow/bin/mutation_overlap.py -c 1 -pop ALL
+[Sat Sep 20 00:15:32 UTC 2025] Starting job: mutation_overlap_chr1_ALL
+[Sat Sep 20 00:15:32 UTC 2025] Command: python3 /workspace/apps/1000genome-workflow/bin/mutation_overlap.py -c 1 -pop ALL
+[Sat Sep 20 00:16:03 UTC 2025] Starting job: mutation_overlap_chr1_ALL
+[Sat Sep 20 00:16:03 UTC 2025] Command: python3 /workspace/apps/1000genome-workflow/bin/mutation_overlap.py -c 1 -pop ALL

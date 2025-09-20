@@ -1,0 +1,2 @@
+[Sat Sep 20 00:15:32 UTC 2025] Starting job: sifting_chr3
+[Sat Sep 20 00:15:32 UTC 2025] Command: python3 /workspace/apps/1000genome-workflow/bin/sifting.py "/workspace/apps/1000genome-workflow/data/20130502/ALL.chr3.250000.vcf.gz" 3

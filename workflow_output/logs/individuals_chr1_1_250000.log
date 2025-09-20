@@ -1,0 +1,8 @@
+[Sat Sep 20 00:06:30 UTC 2025] Starting job: individuals_chr1_1_250000
+[Sat Sep 20 00:06:30 UTC 2025] Command: mpirun -np 4 python3 /workspace/apps/1000genome-workflow/bin/individuals_mpi.py "/workspace/apps/1000genome-workflow/data/20130502/ALL.chr1.250000.vcf.gz" "/workspace/apps/1000genome-workflow/data/20130502/columns.txt" 1 1 250000 250000
+[Sat Sep 20 00:07:19 UTC 2025] Starting job: individuals_chr1_1_250000
+[Sat Sep 20 00:07:19 UTC 2025] Command: mpirun -np 4 python3 /workspace/apps/1000genome-workflow/bin/individuals_mpi.py "/workspace/apps/1000genome-workflow/data/20130502/ALL.chr1.250000.vcf.gz" "/workspace/apps/1000genome-workflow/data/20130502/columns.txt" 1 1 250000 250000
+[Sat Sep 20 00:13:50 UTC 2025] Starting job: individuals_chr1_1_250000
+[Sat Sep 20 00:13:50 UTC 2025] Command: mpirun -np 4 python3 /workspace/apps/1000genome-workflow/bin/individuals_mpi.py "/workspace/apps/1000genome-workflow/data/20130502/ALL.chr1.250000.vcf.gz" "/workspace/apps/1000genome-workflow/data/20130502/columns.txt" 1 1 250000 250000
+[Sat Sep 20 00:15:18 UTC 2025] Starting job: individuals_chr1_1_250000
+[Sat Sep 20 00:15:18 UTC 2025] Command: mpirun -np 4 python3 /workspace/apps/1000genome-workflow/bin/individuals_mpi.py "/workspace/apps/1000genome-workflow/data/20130502/ALL.chr1.250000.vcf.gz" "/workspace/apps/1000genome-workflow/data/20130502/columns.txt" 1 1 250000 250000
