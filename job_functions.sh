@@ -152,8 +152,16 @@ run_individuals_job() {
         check_input_files "$input_file" "$columns_file" || return 1
     fi
     
-    # Build command  
-    local command="$mpi_cmd -np $num_procs python3 ${WORKFLOW_DIR}/bin/individuals_mpi.py \"$input_file\" \"$columns_file\" $chr_num $start_line $end_line $total_lines"
+    # Ensure columns.txt is available in current directory
+    if [[ "$DRY_RUN" != "true" ]]; then
+        if [[ ! -f "columns.txt" && -f "${WORKFLOW_DIR}/data/20130502/columns.txt" ]]; then
+            ln -sf "${WORKFLOW_DIR}/data/20130502/columns.txt" columns.txt
+            log_info "Created symlink to columns.txt"
+        fi
+    fi
+    
+    # Build command - using improved script that handles compressed files and errors better
+    local command="$mpi_cmd -np $num_procs python3 ${WORKFLOW_DIR}/bin/individuals_mpi_fixed.py \"$input_file\" $chr_num $start_line $end_line $total_lines"
     
     execute_job "$job_name" "$command" 7200  # 2 hour timeout
 }

@@ -245,6 +245,40 @@ htop
 df -h
 ```
 
+### Quick Environment Test
+
+Before running the workflow, test your environment:
+```bash
+./test_mpi_environment.sh
+```
+
+### Common Execution Issues
+
+1. **"one or more individuals jobs failed"**
+   - Most common cause: argument mismatch or missing files
+   - Solution: The workflow now uses `individuals_mpi_fixed.py` with better error handling
+   - Check that `columns.txt` exists (auto-symlinked from `data/20130502/`)
+
+2. **MPI Import Errors**
+   ```bash
+   # Install MPI dependencies
+   sudo apt-get install openmpi-bin openmpi-common libopenmpi-dev
+   pip install mpi4py
+   ```
+
+3. **Compressed File Handling**
+   - The improved script automatically handles `.gz` files
+   - No need to decompress VCF files manually
+
+4. **Debugging Individual Jobs**
+   ```bash
+   # Test a single chromosome manually
+   cd /path/to/workflow
+   mpirun -np 4 python3 bin/individuals_mpi_fixed.py \
+     "data/20130502/ALL.chr22.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz" \
+     22 1 1000 50000
+   ```
+
 ## Files Overview
 
 - `run_workflow_mpi.sh` - Main workflow orchestration script
