@@ -22,6 +22,29 @@ The workflow processes genomic data from the 1000 Genomes Project to identify mu
 - **Disk Space**: Minimum 10GB free space
 - **CPU**: Multi-core processor recommended
 
+### Spack Environment Setup
+
+If you're using **Spack** for package management (common on HPC clusters), set up the environment for multi-node execution:
+
+```bash
+# 1. Activate your Spack environment
+spack env activate your-mpi-env
+
+# 2. Set up MPI environment propagation
+./setup_spack_env.sh auto
+
+# 3. Test the setup
+./test_spack_mpi.sh your_hostfile
+
+# 4. Run demo workflow
+./demo_mpi_workflow.sh your_hostfile
+```
+
+The setup script creates multiple methods to ensure `mpi4py` is available on all compute nodes:
+- **Method 1**: Wrapper script that sources Spack on each node
+- **Method 2**: Environment variable propagation via MPI
+- **Method 3**: MPI `-x` flags for variable passing
+
 ## Quick Start
 
 ### 1. Prepare Input Data
@@ -31,15 +54,37 @@ The workflow processes genomic data from the 1000 Genomes Project to identify mu
 ```
 
 ### 2. Run the Workflow
+
+**Single Node Examples:**
 ```bash
 # Run with default settings (all chromosomes, all populations)
 ./run_workflow_mpi.sh
 
-# Run with custom parameters
+# Run with custom parameters  
 ./run_workflow_mpi.sh -i 2 -p 8 -c "1,2,3" --populations "ALL,EUR"
 
 # Dry run to see what would be executed
 ./run_workflow_mpi.sh --dry-run -v
+```
+
+**Multi-Node Examples:**
+```bash
+# Test single chromosome with 16 processes across nodes
+./run_workflow_mpi.sh -p 16 --hostfile=hosts.txt -c "1" --populations "ALL" -v --timeout 10800
+
+# Run multiple chromosomes with 32 processes
+./run_workflow_mpi.sh -p 32 --hostfile=hosts.txt -c "1,2,22" --populations "ALL,EUR" -v
+
+# Full workflow with additional MPI tuning
+./run_workflow_mpi.sh -p 64 --hostfile=hosts.txt --mpi-args "--bind-to core --map-by node" --timeout 14400 -v
+```
+
+**Hostfile Format:**
+```
+node1 slots=8
+node2 slots=8  
+node3 slots=16
+node4 slots=16
 ```
 
 ## Workflow Structure

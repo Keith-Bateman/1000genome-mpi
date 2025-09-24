@@ -1,0 +1,25 @@
+# Sample MPI hostfile for multi-node execution
+# Format: hostname slots=number_of_processes
+#
+# This file specifies which nodes to use and how many MPI processes
+# each node should run. Adjust the hostnames and slot counts based
+# on your actual cluster configuration.
+
+# Example configuration for 4 nodes with different capabilities:
+node1 slots=4
+node2 slots=4  
+node3 slots=8
+node4 slots=8
+
+# Total slots: 24 processes
+# Usage example: ./run_workflow_mpi.sh -p 24 --hostfile hosts.txt
+
+# Alternative format (if you don't want to specify slots):
+# node1
+# node2
+# node3
+# node4
+# (MPI will distribute processes evenly)
+
+# For localhost testing with multiple processes:
+# localhost slots=8

@@ -22,6 +22,10 @@ OUTPUT_DIR="${WORKFLOW_DIR}/${DEFAULT_OUTPUT_DIR}"
 LOG_DIR="${OUTPUT_DIR}/logs"
 # Convert string to array for populations
 read -ra POPULATIONS <<< "$DEFAULT_POPULATIONS_STR"
+# MPI multi-node configuration
+HOSTFILE="${DEFAULT_HOSTFILE}"
+MPI_ARGS="${DEFAULT_MPI_ARGS}"
+TIMEOUT_INDIVIDUALS="${TIMEOUT_INDIVIDUALS}"
 DRY_RUN=false
 VERBOSE=false
 
@@ -38,7 +42,10 @@ Convert and run 1000genome Pegasus workflow using MPI
 OPTIONS:
     -d, --dataset DIR       Dataset directory name (default: 20130502)
     -i, --individuals N     Number of individuals jobs per chromosome (default: 1)
-    -p, --processes N       Number of MPI processes (default: 4)
+    -p, --processes N       Number of MPI processes (default: 8)
+    --hostfile FILE         MPI hostfile for multi-node execution
+    --mpi-args "ARGS"       Additional MPI arguments (quoted)
+    --timeout SECONDS       Job timeout in seconds for individuals jobs (default: 10800)
     -o, --output DIR        Output directory (default: ./workflow_output)
     -c, --chromosomes LIST  Comma-separated list of chromosomes (default: all from data.csv)
     --populations LIST      Comma-separated list of populations (default: ALL,EUR,EAS,AFR,AMR,SAS,GBR)
@@ -51,6 +58,16 @@ EXAMPLES:
     $0 -i 2 -p 8                               # Use 2 individuals jobs per chromosome, 8 MPI processes
     $0 -c "1,2,3" --populations "ALL,EUR"     # Run only chromosomes 1,2,3 with ALL and EUR populations
     $0 --dry-run -v                           # Show what would be executed
+
+MULTI-NODE EXAMPLES:
+    $0 -p 16 --hostfile hosts.txt                          # 16 processes across nodes in hosts.txt
+    $0 -p 32 --hostfile hosts.txt --mpi-args "-bind-to core"  # With additional MPI options
+    $0 -p 8 --hostfile hosts.txt -c "1" --timeout 14400       # Single chromosome, 4 hour timeout
+
+HOSTFILE FORMAT:
+    node1 slots=4
+    node2 slots=4
+    node3 slots=8
 EOF
 }
 
@@ -83,6 +100,18 @@ parse_args() {
                 ;;
             -p|--processes)
                 NUM_MPI_PROCS="$2"
+                shift 2
+                ;;
+            --hostfile)
+                HOSTFILE="$2"
+                shift 2
+                ;;
+            --mpi-args)
+                MPI_ARGS="$2"
+                shift 2
+                ;;
+            --timeout)
+                TIMEOUT_INDIVIDUALS="$2"
                 shift 2
                 ;;
             -o|--output)

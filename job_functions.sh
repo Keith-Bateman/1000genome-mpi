@@ -7,21 +7,75 @@
 
 # Source this file to get job execution functions
 
-# Get MPI command (mpirun or mpiexec)
+# Get MPI command with Spack environment support
 get_mpi_command() {
-    if [[ "$DRY_RUN" == "true" ]]; then
-        echo "mpirun"  # Use mpirun for dry runs
-        return 0
-    fi
+    local script="$1"
+    shift
+    local args=("$@")
     
-    if command -v mpirun &> /dev/null; then
-        echo "mpirun"
+    # Determine MPI base command
+    local mpi_base=""
+    if [[ "$DRY_RUN" == "true" ]]; then
+        mpi_base="mpirun"  # Use mpirun for dry runs
+    elif command -v mpirun &> /dev/null; then
+        mpi_base="mpirun"
     elif command -v mpiexec &> /dev/null; then
-        echo "mpiexec"
+        mpi_base="mpiexec"
     else
         echo "ERROR: Neither mpirun nor mpiexec found" >&2
         return 1
     fi
+    
+    # Build base MPI command
+    local mpi_cmd="$mpi_base"
+    local mpi_args=("-np" "$NUM_MPI_PROCS")
+    
+    # Add hostfile if specified
+    if [[ -n "$HOSTFILE" && -f "$HOSTFILE" ]]; then
+        mpi_args+=("--hostfile" "$HOSTFILE")
+        log_debug "Using hostfile: $HOSTFILE"
+    fi
+    
+    # Method 1: Use wrapper script if available
+    if [[ -f "${WORKFLOW_DIR}/mpi_python_wrapper.sh" ]]; then
+        log_debug "Using Spack wrapper script"
+        mpi_args+=("${WORKFLOW_DIR}/mpi_python_wrapper.sh" "$script")
+        
+    # Method 2: Use environment variable propagation  
+    elif [[ -f "${WORKFLOW_DIR}/spack_env_vars.sh" ]]; then
+        log_debug "Using Spack environment variables"
+        mpi_args+=("bash" "-c" "source ${WORKFLOW_DIR}/spack_env_vars.sh && python3 $script")
+        
+    # Method 3: Use MPI -x flags if available
+    elif [[ -f "${WORKFLOW_DIR}/mpi_env_flags.txt" ]]; then
+        log_debug "Using MPI environment flags"
+        local env_flags
+        env_flags="$(cat "${WORKFLOW_DIR}/mpi_env_flags.txt")"
+        read -ra flag_array <<< "$env_flags"
+        mpi_args=("${flag_array[@]}" "${mpi_args[@]}")
+        mpi_args+=("python3" "$script")
+        
+    # Fallback: Regular python3
+    else
+        log_debug "Using regular python3 (no Spack support detected)"
+        mpi_args+=("python3" "$script")
+    fi
+    
+    # Add script arguments
+    mpi_args+=("${args[@]}")
+    
+    # Add any additional MPI arguments
+    if [[ -n "$MPI_ARGS" ]]; then
+        read -ra additional_args <<< "$MPI_ARGS"
+        # Insert additional args after -np but before the command
+        local temp_args=("${mpi_args[@]:0:2}")  # Keep -np N
+        temp_args+=("${additional_args[@]}")     # Add custom args
+        temp_args+=("${mpi_args[@]:2}")         # Add rest
+        mpi_args=("${temp_args[@]}")
+        log_debug "Using additional MPI args: $MPI_ARGS"
+    fi
+    
+    echo "${mpi_cmd} ${mpi_args[*]}"
 }
 
 # Execute a job with timeout and error handling
@@ -142,8 +196,6 @@ run_individuals_job() {
     local num_procs="${7:-$NUM_MPI_PROCS}"
     
     local job_name="individuals_chr${chr_num}_${start_line}_${end_line}"
-    local mpi_cmd=$(get_mpi_command) || return 1
-    
     local input_file="${WORKFLOW_DIR}/data/${DATASET}/${vcf_file}"
     
     # For dry run, don't check files
@@ -160,10 +212,24 @@ run_individuals_job() {
         fi
     fi
     
-    # Build command - using improved script that handles compressed files and errors better
-    local command="$mpi_cmd -np $num_procs python3 ${WORKFLOW_DIR}/bin/individuals_mpi_fixed.py \"$input_file\" $chr_num $start_line $end_line $total_lines"
+    # Use improved script with proper MPI communication if available
+    local script="${WORKFLOW_DIR}/bin/individuals_mpi_proper.py"
+    if [[ ! -f "$script" ]]; then
+        script="${WORKFLOW_DIR}/bin/individuals_mpi_fixed.py" 
+        log_warning "Using fallback script: individuals_mpi_fixed.py"
+    else
+        log_info "Using proper MPI script: individuals_mpi_proper.py"
+    fi
     
-    execute_job "$job_name" "$command" 7200  # 2 hour timeout
+    if [[ ! -f "$script" ]]; then
+        script="${WORKFLOW_DIR}/bin/individuals_mpi.py"
+        log_warning "Using original script: individuals_mpi.py"
+    fi
+    
+    # Build command using new get_mpi_command with Spack support
+    local command=$(get_mpi_command "$script" "$input_file" "$chr_num" "$start_line" "$end_line" "$total_lines") || return 1
+    
+    execute_job "$job_name" "$command" "${TIMEOUT_INDIVIDUALS:-10800}"  # Use configured timeout
 }
 
 # Individuals merge job runner
@@ -172,10 +238,12 @@ run_individuals_merge_job() {
     local num_procs="${2:-$((NUM_MPI_PROCS + 1))}"  # Needs one extra process for merge
     
     local job_name="individuals_merge_chr${chr_num}"
-    local mpi_cmd=$(get_mpi_command) || return 1
     
-    # Build command
-    local command="$mpi_cmd -np $num_procs python3 ${WORKFLOW_DIR}/bin/individuals_merge_mpi.py $chr_num"
+    # Use merge script if available, otherwise fall back to original
+    local script="${WORKFLOW_DIR}/bin/individuals_merge_mpi.py"
+    
+    # Build command using new get_mpi_command with Spack support
+    local command=$(get_mpi_command "$script" "$chr_num") || return 1
     
     execute_job "$job_name" "$command" 1800  # 30 minute timeout
 }

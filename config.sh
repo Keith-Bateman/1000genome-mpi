@@ -16,16 +16,20 @@ export DEFAULT_LOG_DIR="workflow_output/logs"
 
 # Default Job Parameters  
 export DEFAULT_INDIVIDUALS_JOBS=1
-export DEFAULT_MPI_PROCS=4
+export DEFAULT_MPI_PROCS=8  # Increased for multi-node
 # Note: Arrays can't be exported, handle in main script
 DEFAULT_POPULATIONS_STR="ALL EUR EAS AFR AMR SAS GBR"
 
+# MPI Multi-node Configuration
+export DEFAULT_HOSTFILE=""
+export DEFAULT_MPI_ARGS=""
+
 # Timeout Configuration (in seconds)
-export TIMEOUT_INDIVIDUALS=7200    # 2 hours
-export TIMEOUT_MERGE=1800          # 30 minutes  
+export TIMEOUT_INDIVIDUALS=10800   # 3 hours (increased for multi-node)
+export TIMEOUT_MERGE=3600          # 1 hour
 export TIMEOUT_SIFTING=1800        # 30 minutes
 export TIMEOUT_ANALYSIS=1800       # 30 minutes
-export TIMEOUT_TOTAL=21600         # 6 hours total
+export TIMEOUT_TOTAL=28800         # 8 hours total (increased)
 
 # Resource Requirements
 export MIN_MEMORY_GB=4

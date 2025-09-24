@@ -5,13 +5,13 @@
 # Fixes issues found in the original script for running outside container
 ###################################################################################
 
-import os
-import sys
-import re
-import time
-import tarfile
-import shutil
 import gzip
+import os
+import re
+import shutil
+import sys
+import tarfile
+import time
 
 # Try to import MPI libraries, with fallback for debugging
 try:
